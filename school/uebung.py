@@ -1,8 +1,16 @@
+import random
+import string
 
-import requests
-
-def get_weather(apikey, city):
-    url = "https://api.openweathermap.org/data/2.5/weather"
-    parameter = {"q": city, "appid": apikey"}
+def blockwoche_3 ():
     
-    resonse = requests.get
+    def generate_password():
+    
+        allowed_characters = string.ascii_letters + string.digits + string.punctuation
+        password = ''.join(random.choice(allowed_characters) for _ in range(7))
+        password += random.choice(string.punctuation)
+        return password
+
+    generated_password = generate_password()
+    print(generate_password())
+
+print(blockwoche_3())
